@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.6.0",
-    "vue": "^3.2.41"
+    "vue": "^3.2.41",
+    "vue-i18n": "9"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^6.0.3",

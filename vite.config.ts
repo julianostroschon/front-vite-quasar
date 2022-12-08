@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import AutoImport from 'unplugin-auto-import/vite'
 import path from 'node:path'
 
@@ -14,7 +15,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    // https://github.com/antfu/unplugin-auto-import
+    
     AutoImport({
       imports: [
         'vue',
@@ -28,16 +29,23 @@ export default defineConfig({
       dirs: [
         'src/composables',
         'src/store',
+        'src/helpers/'
       ],
       vueTemplate: true,
     }),
-    // https://github.com/antfu/unplugin-vue-components
+    
     Components({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+    }),
+
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [ path.resolve(__dirname, './locales/**') ],
     }),
   ]
 })

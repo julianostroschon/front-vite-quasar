@@ -5,6 +5,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import AutoImport from 'unplugin-auto-import/vite'
 import path from 'node:path'
 import Pages from 'vite-plugin-pages'
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 
 
@@ -16,7 +17,13 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
+    vue({
+      template: { transformAssetUrls }
+    }),
+
+    quasar({
+      sassVariables: 'src/quasar-variables.sass'
+    }),
     Pages({
       // Here we can add 'md'
       extensions: ['vue'],

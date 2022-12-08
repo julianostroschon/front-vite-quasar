@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 defineProps<{ msg: string }>()
 
 const count = ref(0)

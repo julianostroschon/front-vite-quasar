@@ -6,3 +6,7 @@ export function increment(value: number) {
 export function decrement(value: number) {
   return value -= 1
 }
+
+export function loga(value: any) {
+  console.log(value)
+}

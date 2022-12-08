@@ -1,8 +1,11 @@
-import { i18n } from './modules/i18n';
 import { createApp } from 'vue'
 
-import './style.css'
+import { i18n, pinia } from './modules';
 import App from './App.vue'
+import './style.css'
 
 
-createApp(App).use(i18n).mount('#app')
+createApp(App)
+  .use(pinia)
+  .use(i18n)
+  .mount('#app')

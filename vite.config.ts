@@ -4,18 +4,26 @@ import Components from 'unplugin-vue-components/vite'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import AutoImport from 'unplugin-auto-import/vite'
 import path from 'node:path'
+import Pages from 'vite-plugin-pages'
+
 
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      '@/': `${path.resolve(__dirname, 'src')}/`,
+      '~': `${path.resolve(__dirname, 'src')}/`,
     },
   },
   plugins: [
     vue(),
-    
+    Pages({
+      // Here we can add 'md'
+      extensions: ['vue'],
+      dirs: [
+        { dir: 'src/views', baseRoute: '' },
+      ]
+    }),
     AutoImport({
       imports: [
         'vue',

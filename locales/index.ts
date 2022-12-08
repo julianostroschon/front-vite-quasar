@@ -1,5 +1,7 @@
 import br from './br'
+import en from './en'
 
 export default {
-  br
+  br,
+  en,
 }

@@ -722,6 +722,11 @@ gopd@^1.0.1:
   dependencies:
     get-intrinsic "^1.1.3"
 
+graphql@^16.6.0:
+  version "16.6.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.6.0.tgz#c2dcffa4649db149f6282af726c8c83f1c7c5fdb"
+  integrity sha512-KPIBPDlW7NxrbT/eh4qPXz5FiFdL5UbaA0XUNz2Rp3Z3hqBSkbj0GVjwFDztsWVauZUWsbKHgMg++sk8UX0bkw==
+
 has-bigints@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/has-bigints/-/has-bigints-1.0.2.tgz#0871bd3e3d51626f6ca0966668ba35d5602d6eaa"
@@ -1244,6 +1249,11 @@ unplugin@^1.0.0:
     chokidar "^3.5.3"
     webpack-sources "^3.2.3"
     webpack-virtual-modules "^0.4.6"
+
+villus@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/villus/-/villus-2.0.1.tgz#3aa666d16ca817357009cc4033bc099312027751"
+  integrity sha512-SVzPzxhXQz1aKdT1gHgy5eDc1YwrRvFi0EKmCuL/WhHm7N992Xobj90x+qzIyAxjQXo9Jlb5rpKyYjTsv+NM7g==
 
 vite-plugin-pages@^0.27.1:
   version "0.27.1"

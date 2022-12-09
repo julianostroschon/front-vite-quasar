@@ -1,3 +1,5 @@
+export * from './host'
+export * from './query'
 
 export function increment(value: number) {
   return value += 1

@@ -13,6 +13,8 @@
     "skipLibCheck": true,
     "noEmit": true
   },
+
+  "types":  ["vite-plugin-pages/client"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules", "vite-plugin-pages/client"],
   "references": [{ "path": "./tsconfig.node.json" }]

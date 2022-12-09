@@ -1,23 +1,23 @@
 <template>
   <div>
-    <h1>{{ id }}</h1>
+    <h1>{{ name }}</h1>
+    <!-- <h2>{{ id }}</h2> -->
     <q-btn @click="ping">Ping</q-btn>
   </div>
 </template>
 <script setup lang="ts">
+import path from 'node:path'
 import { useQuery, useClient, useMutation } from 'villus'
-defineProps<{id: string}>()
+defineProps<{ name: string, id: string }>()
+
 const query = `query Ping {
   ping
 }`
 
-useClient({
-  url: 'http://localhost:4001'
-});
-
-
-await useQuery({query})
+// const { data, execute } = (await useQuery({query}))
+// result.value = 
 async function ping() {
+  loga((import.meta))
   // getEnvironmentVariable('GQL_ENDPOINT')
 }
 </script>

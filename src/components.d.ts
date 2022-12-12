@@ -8,8 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ButtonHome: typeof import('./components/ButtonHome.vue')['default']
+    copy: typeof import('./components/NavBar/index copy.vue')['default']
     HeaderNav: typeof import('./components/HeaderNav.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Item: typeof import('./components/NavBar/Item.vue')['default']
+    NavBar: typeof import('./components/NavBar/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

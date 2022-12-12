@@ -1,3 +1,5 @@
 <template>
-  <h2>Editor Markdown</h2>
+  <p>
+    {{$t('markdown.title')}}
+  </p>
 </template>

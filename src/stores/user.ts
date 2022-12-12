@@ -1,27 +1,27 @@
-import { defineStore, acceptHMRUpdate } from 'pinia'
+import { defineStore, acceptHMRUpdate } from 'pinia';
 
 export const useUserStore = defineStore('user', () => {
 
   /**
    * Current name of the user.
    */
-   const username = ref('Juliano')
-   const age = ref(29)
+  const username = ref('Juliano');
+  const age = ref(29);
   
   /**
    * `incrementAge` is a function that takes no arguments and returns nothing
    */
-   function incrementAge() {
-     age.value += 1
-   }
+  function incrementAge() {
+    age.value += 1;
+  }
  
-   return {
-     username,
-     age,
-     incrementAge
-   }
- })
+  return {
+    username,
+    age,
+    incrementAge
+  };
+});
  
- if (import.meta.hot)
-   import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
+if (import.meta.hot)
+  import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot));
  

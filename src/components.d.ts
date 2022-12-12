@@ -10,6 +10,7 @@ declare module '@vue/runtime-core' {
     ButtonHome: typeof import('./components/ButtonHome.vue')['default']
     HeaderNav: typeof import('./components/HeaderNav.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    MakdownEditor: typeof import('./components/MakdownEditor.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

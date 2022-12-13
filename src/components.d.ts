@@ -12,8 +12,11 @@ declare module "@vue/runtime-core" {
     HeaderNav: typeof import("./components/HeaderNav.vue")["default"];
     HelloWorld: typeof import("./components/HelloWorld.vue")["default"];
     Item: typeof import("./components/SideBar/Item.vue")["default"];
+    ItemList: typeof import("./components/SideBar/ItemList.vue")["default"];
     Layout: typeof import("./components/Layout/index.vue")["default"];
+    ListMenu: typeof import("./components/SideBar/ListMenu.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];
+    MenuDrawer: typeof import("./components/SideBar/MenuDrawer.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
     SideBar: typeof import("./components/SideBar/index.vue")["default"];

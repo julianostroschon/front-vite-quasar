@@ -17,7 +17,7 @@ const menu = ref(true);
 
 const menuList = [
   {
-    icon: "folder",
+    icon: "book",
     label: "caderno.title",
     separator: true,
     subItems: [
@@ -30,7 +30,7 @@ const menuList = [
     ],
   },
   {
-    icon: "bookmarks",
+    icon: "sell",
     label: "tags",
     separator: false,
     subItems: [

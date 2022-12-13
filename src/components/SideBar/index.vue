@@ -8,9 +8,7 @@
     class="bg-grey-3"
   >
     <q-scroll-area class="fit">
-      <q-list>
-        <Item v-for="item in listItems" :key="item" :item="item" />
-      </q-list>
+      <ListMenu v-bind="$props" />
     </q-scroll-area>
   </q-drawer>
 </template>

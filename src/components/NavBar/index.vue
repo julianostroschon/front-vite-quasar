@@ -1,27 +1,7 @@
 <template>
   <q-layout view="hHh Lpr lff"  style="height: 300px" class="shadow-2 rounded-borders">
-    <q-header elevated class="bg-black">
-      <q-toolbar>
-        <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
-        <q-toolbar-title>Header</q-toolbar-title>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer
-      v-model="drawer"
-      show-if-above
-      :width="250"
-      :breakpoint="500"
-      bordered
-      class="bg-grey-3"
-    >
-      <q-scroll-area class="fit">
-        <q-list>
-          <item v-for="item in menuList" :item="item" />
-        </q-list>
-      </q-scroll-area>
-    </q-drawer>
-
+    <header-bar @drawer="drawer = !drawer"/>
+    <drawer-bar :drawer="drawer" :list-items="menuList" />
     <q-page-container>
       <slot name="content" />
     </q-page-container>
@@ -30,7 +10,7 @@
 
 <script setup lang="ts">
 
-const drawer = ref(false)
+const drawer = ref(true)
 
 const menuList = [
   {

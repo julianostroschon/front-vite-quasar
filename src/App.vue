@@ -1,12 +1,9 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <nav-bar>
+  <layout>
     <template #content>
       <RouterView />
     </template>
-  </nav-bar>
+  </layout>
 </template>
 
 <style scoped>

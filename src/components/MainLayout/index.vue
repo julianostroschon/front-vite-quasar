@@ -4,7 +4,7 @@
     style="height: 300px"
     class="shadow-2 rounded-borders"
   >
-    <Header @open-menu="menu = !menu" />
+    <HeaderBar @open-menu="menu = !menu" />
     <SideBar :drawer="menu" :list-items="menuList" />
     <q-page-container>
       <slot name="content" />
@@ -17,7 +17,7 @@ const menu = ref(true);
 
 const menuList = [
   {
-    icon: "folder",
+    icon: "book",
     label: "caderno.title",
     separator: true,
     subItems: [
@@ -30,7 +30,7 @@ const menuList = [
     ],
   },
   {
-    icon: "bookmarks",
+    icon: "sell",
     label: "tags",
     separator: false,
     subItems: [

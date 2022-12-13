@@ -9,27 +9,27 @@
   >
     <q-scroll-area class="fit">
       <q-list>
-        <item v-for="item in listItems" :key="item" :item="item" />
+        <Item v-for="item in listItems" :key="item" :item="item" />
       </q-list>
     </q-scroll-area>
   </q-drawer>
 </template>
 
 <script setup lang="ts">
-const drawer = ref(false)
+const drawer = ref(false);
 
 const props = defineProps({
   listItems: {
     type: Array,
-    default: () => []
+    default: () => [],
   },
   drawer: {
     type: Boolean,
-    default: () => false
-  }
-})
+    default: () => false,
+  },
+});
 
 watchEffect(() => {
-  drawer.value = props.drawer
+  drawer.value = props.drawer;
 });
 </script>

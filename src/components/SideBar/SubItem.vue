@@ -1,10 +1,7 @@
 <template>
-  <q-item
-    clickable 
-    v-ripple 
-  >
+  <q-item clickable v-ripple>
     <q-item-section>
-      {{ subItem.name }} 
+      {{ subItem.name }}
     </q-item-section>
   </q-item>
 </template>
@@ -13,7 +10,7 @@
 defineProps({
   subItem: {
     type: Object,
-    default: () => ({})
-  }
-})
+    default: () => ({}),
+  },
+});
 </script>

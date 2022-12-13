@@ -5,19 +5,19 @@
     :label="$t(item.label)"
     default-opened
   >
-    <sub-item
-      v-for="subItem in item.subItems" 
-      :key="subItem" 
+    <SubItem
+      v-for="subItem in item.subItems"
+      :key="subItem"
       :sub-item="subItem"
     />
   </q-expansion-item>
 </template>
-  
+
 <script setup lang="ts">
 defineProps({
   item: {
     type: Object,
-    default: () => ({})
-  }
-})
+    default: () => ({}),
+  },
+});
 </script>

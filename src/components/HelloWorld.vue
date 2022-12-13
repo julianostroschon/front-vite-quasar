@@ -17,7 +17,7 @@ const count = ref(0)
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="(count = increment(count))">Aumentar cadernos</button>
+    <button type="button" @click="(count = increment(count))">{{$t('caderno.aumentarQtde')}}</button>
     <button type="button" @click="(count = decrement(count))">Diminuir cadernos</button>
     <button type="button" @click="toogleLocale">reset</button>
   </div>

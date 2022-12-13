@@ -9,7 +9,7 @@
         icon="menu" 
       />
       <q-toolbar-title>
-        {{ $t('header') }} 
+        Header
       </q-toolbar-title>
     </q-toolbar>
   </q-header>

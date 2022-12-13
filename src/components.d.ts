@@ -8,7 +8,6 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     ButtonHome: typeof import('./components/ButtonHome.vue')['default']
-    copy: typeof import('./components/NavBar/index copy.vue')['default']
     DrawerBar: typeof import('./components/NavBar/DrawerBar.vue')['default']
     HeaderBar: typeof import('./components/NavBar/HeaderBar.vue')['default']
     HeaderNav: typeof import('./components/HeaderNav.vue')['default']

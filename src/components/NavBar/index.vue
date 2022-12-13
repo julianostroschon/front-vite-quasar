@@ -1,7 +1,7 @@
 <template>
   <q-layout view="hHh Lpr lff"  style="height: 300px" class="shadow-2 rounded-borders">
-    <header-bar @drawer="drawer = !drawer"/>
-    <drawer-bar :drawer="drawer" :list-items="menuList" />
+    <header-bar @open-menu="menu = !menu"/>
+    <drawer-bar :drawer="menu" :list-items="menuList" />
     <q-page-container>
       <slot name="content" />
     </q-page-container>
@@ -10,12 +10,12 @@
 
 <script setup lang="ts">
 
-const drawer = ref(true)
+const menu = ref(true)
 
 const menuList = [
   {
     icon: 'folder',
-    label: 'Notebooks',
+    label: 'caderno.title',
     separator: true,
     subItems: [
       {
@@ -28,7 +28,7 @@ const menuList = [
   },
   {
     icon: 'bookmarks',
-    label: 'Tags',
+    label: 'tags',
     separator: false,
     subItems: [
       {

@@ -2,7 +2,7 @@
   <q-expansion-item
     expand-separator
     :icon="item.icon"
-    :label="item.label"
+    :label="$t(item.label)"
     default-opened
   >
     <sub-item

@@ -3,7 +3,7 @@
     <q-toolbar>
       <q-btn 
         flat 
-        @click="$emit('drawer')" 
+        @click="$emit('openMenu')" 
         round 
         dense 
         icon="menu" 
@@ -16,5 +16,5 @@
 </template>
 
 <script setup lang="ts">
-defineEmits(['drawer'])
+defineEmits(['openMenu'])
 </script>

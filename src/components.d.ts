@@ -18,6 +18,7 @@ declare module "@vue/runtime-core" {
     RouterView: typeof import("vue-router")["RouterView"];
     SideBar: typeof import("./components/SideBar/index.vue")["default"];
     SubItem: typeof import("./components/SideBar/SubItem.vue")["default"];
+    ToggleTheme: typeof import("./components/ToggleTheme.vue")["default"];
     ToolBar: typeof import("./components/Header/ToolBar.vue")["default"];
   }
 }

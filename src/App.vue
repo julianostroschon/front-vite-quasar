@@ -1,9 +1,9 @@
 <template>
-  <layout>
+  <MainLayout>
     <template #content>
       <RouterView />
     </template>
-  </layout>
+  </MainLayout>
 </template>
 
 <style scoped>

@@ -9,11 +9,13 @@ declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     ButtonHome: typeof import("./components/ButtonHome.vue")["default"];
     Header: typeof import("./components/Header/index.vue")["default"];
+    HeaderBar: typeof import("./components/HeaderBar/index.vue")["default"];
     HeaderNav: typeof import("./components/HeaderNav.vue")["default"];
     HelloWorld: typeof import("./components/HelloWorld.vue")["default"];
     Item: typeof import("./components/SideBar/Item.vue")["default"];
     ItemList: typeof import("./components/SideBar/ItemList.vue")["default"];
     Layout: typeof import("./components/Layout/index.vue")["default"];
+    MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     ListMenu: typeof import("./components/SideBar/ListMenu.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];
     MenuDrawer: typeof import("./components/SideBar/MenuDrawer.vue")["default"];
@@ -21,6 +23,6 @@ declare module "@vue/runtime-core" {
     RouterView: typeof import("vue-router")["RouterView"];
     SideBar: typeof import("./components/SideBar/index.vue")["default"];
     SubItem: typeof import("./components/SideBar/SubItem.vue")["default"];
-    ToolBar: typeof import("./components/Header/ToolBar.vue")["default"];
+    ToolBar: typeof import("./components/HeaderBar/ToolBar.vue")["default"];
   }
 }

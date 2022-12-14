@@ -19,13 +19,14 @@ declare module "@vue/runtime-core" {
     Header: typeof import("./components/Header/index.vue")["default"];
     HeaderBar: typeof import("./components/HeaderBar/index.vue")["default"];
     HeaderCard: typeof import("./components/DynamicDialog/HeaderCard.vue")["default"];
+    HeaderItem: typeof import("./components/SideBar/HeaderItem.vue")["default"];
     HeaderNav: typeof import("./components/HeaderNav.vue")["default"];
     HelloWorld: typeof import("./components/HelloWorld.vue")["default"];
     Item: typeof import("./components/SideBar/Item.vue")["default"];
-    ItemList: typeof import("./components/SideBar/ItemList.vue")["default"];
     Layout: typeof import("./components/Layout/index.vue")["default"];
     ListMenu: typeof import("./components/SideBar/ListMenu.vue")["default"];
     MainCard: typeof import("./components/DynamicDialog/MainCard.vue")["default"];
+    MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];
     MenuDrawer: typeof import("./components/SideBar/MenuDrawer.vue")["default"];
@@ -37,6 +38,7 @@ declare module "@vue/runtime-core" {
     SubItem: typeof import("./components/SideBar/SubItem.vue")["default"];
     Teste: typeof import("./components/DialogNotebook/teste.vue")["default"];
     TitleForm: typeof import("./components/CreateNotebook/TitleForm.vue")["default"];
+    ToggleTheme: typeof import("./components/ToggleTheme.vue")["default"];
     ToolBar: typeof import("./components/HeaderBar/ToolBar.vue")["default"];
   }
 }

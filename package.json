@@ -39,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "@vitejs/plugin-vue": "^3.2.0",
+    "@vueuse/head": "^1.0.22",
     "babel-loader": "^8.3.0",
     "eslint": "^8.29.0",
     "eslint-plugin-vue": "^9.8.0",

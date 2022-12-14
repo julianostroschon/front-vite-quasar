@@ -9,10 +9,14 @@ declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     ButtonHome: typeof import("./components/ButtonHome.vue")["default"];
     Header: typeof import("./components/Header/index.vue")["default"];
+    HeaderBar: typeof import("./components/HeaderBar/index.vue")["default"];
+    HeaderItem: typeof import("./components/SideBar/HeaderItem.vue")["default"];
     HeaderNav: typeof import("./components/HeaderNav.vue")["default"];
     HelloWorld: typeof import("./components/HelloWorld.vue")["default"];
     Item: typeof import("./components/SideBar/Item.vue")["default"];
     Layout: typeof import("./components/Layout/index.vue")["default"];
+    ListMenu: typeof import("./components/SideBar/ListMenu.vue")["default"];
+    MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];

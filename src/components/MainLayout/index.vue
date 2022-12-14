@@ -19,7 +19,7 @@ const menuList = [
   {
     icon: "book",
     label: "caderno.title",
-    separator: true,
+    addButton: true,
     subItems: [
       {
         name: "notebook1",
@@ -32,7 +32,6 @@ const menuList = [
   {
     icon: "sell",
     label: "tags",
-    separator: false,
     subItems: [
       {
         name: "tag1",

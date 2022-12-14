@@ -6,6 +6,7 @@
     :breakpoint="500"
     bordered
     class="bg-grey-3"
+    :class="textColor"
   >
     <q-scroll-area class="fit">
       <ListMenu v-bind="$props" />

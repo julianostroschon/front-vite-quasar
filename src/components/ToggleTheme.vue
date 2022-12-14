@@ -3,7 +3,7 @@
     @click="toggleDark()"
     :icon="themeIcon"
     v-model="value"
-    :color="color"
+    :color="textColor"
     size="xl"
   />
 </template>

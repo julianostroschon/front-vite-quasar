@@ -1,5 +1,5 @@
 export const backgroundColor = computed(() =>
-  isDark.value ? "bg-dark" : "bg-white"
+  isDark.value ? "bg-grey-7" : "bg-white"
 );
 
 export const textColor = computed(() =>

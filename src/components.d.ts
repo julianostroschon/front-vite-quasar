@@ -12,6 +12,7 @@ declare module "@vue/runtime-core" {
     CardFooter: typeof import("./components/DynamicDialog/CardFooter.vue")["default"];
     CardHeader: typeof import("./components/DynamicDialog/CardHeader.vue")["default"];
     CreateNotebook: typeof import("./components/CreateNotebook/index.vue")["default"];
+    CreateTag: typeof import("./components/CreateTag/index.vue")["default"];
     DialogNotebook: typeof import("./components/DialogNotebook/index.vue")["default"];
     DynamicDialog: typeof import("./components/DynamicDialog/index.vue")["default"];
     FooterCard: typeof import("./components/DynamicDialog/FooterCard.vue")["default"];
@@ -23,10 +24,10 @@ declare module "@vue/runtime-core" {
     HeaderNav: typeof import("./components/HeaderNav.vue")["default"];
     HelloWorld: typeof import("./components/HelloWorld.vue")["default"];
     Item: typeof import("./components/SideBar/Item.vue")["default"];
+    ItemList: typeof import("./components/SideBar/ItemList.vue")["default"];
     Layout: typeof import("./components/Layout/index.vue")["default"];
     ListMenu: typeof import("./components/SideBar/ListMenu.vue")["default"];
     MainCard: typeof import("./components/DynamicDialog/MainCard.vue")["default"];
-    MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];
     MenuDrawer: typeof import("./components/SideBar/MenuDrawer.vue")["default"];

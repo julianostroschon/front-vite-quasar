@@ -1,24 +1,20 @@
 <template>
   <HeaderBar />
-  <div class="height-layout">
-    <q-splitter v-model="splitterModel" style="height: 100%" unit="%">
-      <template v-slot:before>
-        <div class="bg-grey-5 fit">
-          <NotebooksAndTagsMenu :list-items="menuList" />
-        </div>
-      </template>
+  <q-splitter v-model="splitterModel" class="full-height" unit="%">
+    <template v-slot:before>
+      <NotebooksAndTagsMenu :list-items="menuList" class="bg-grey-5 fit" />
+    </template>
 
-      <template v-slot:after>
-        <q-splitter v-model="insideModel" style="height: 100%" unit="%">
-          <template v-slot:before> </template>
+    <template v-slot:after>
+      <q-splitter v-model="insideModel" unit="%">
+        <template v-slot:before> </template>
 
-          <template v-slot:after>
-            <slot />
-          </template>
-        </q-splitter>
-      </template>
-    </q-splitter>
-  </div>
+        <template v-slot:after>
+          <slot />
+        </template>
+      </q-splitter>
+    </template>
+  </q-splitter>
 </template>
 
 <script setup lang="ts">

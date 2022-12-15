@@ -1,7 +1,7 @@
 <template>
   <q-card class="card-width">
     <CardHeader v-bind="$props" />
-    <q-card-section>
+    <q-card-section align="center">
       <slot />
     </q-card-section>
     <CardFooter />

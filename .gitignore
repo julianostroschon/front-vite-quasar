@@ -25,3 +25,7 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+#auto imports files 
+auto-imports.d.ts
+components.d.ts

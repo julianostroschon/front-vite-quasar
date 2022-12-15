@@ -13,9 +13,7 @@ useHead({
 
 <template>
   <MainLayout>
-    <template #content>
-      <RouterView />
-    </template>
+    <RouterView />
   </MainLayout>
 </template>
 

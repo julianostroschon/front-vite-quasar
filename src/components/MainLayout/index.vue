@@ -1,4 +1,5 @@
 <template>
+  <HeaderBar />
   <div class="height-layout">
     <q-splitter v-model="splitterModel" style="height: 100%" unit="%">
       <template v-slot:before>

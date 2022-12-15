@@ -3,28 +3,28 @@
   <div class="height-layout">
     <q-splitter v-model="splitterModel" style="height: 100%" unit="%">
       <template v-slot:before>
-        <q-splitter v-model="insideModel" style="height: 100%" unit="%">
-          <template v-slot:before>
-            <div class="bg-grey-5 fit">
-              <NotebooksAndTagsMenu :list-items="menuList" />
-            </div>
-          </template>
-
-          <template v-slot:after> </template>
-        </q-splitter>
+        <div class="bg-grey-5 fit">
+          <NotebooksAndTagsMenu :list-items="menuList" />
+        </div>
       </template>
 
       <template v-slot:after>
-        <slot />
+        <q-splitter v-model="insideModel" style="height: 100%" unit="%">
+          <template v-slot:before> </template>
+
+          <template v-slot:after>
+            <slot />
+          </template>
+        </q-splitter>
       </template>
     </q-splitter>
   </div>
 </template>
 
 <script setup lang="ts">
-const splitterModel = ref(35);
+const splitterModel = ref(15);
 
-const insideModel = ref(40);
+const insideModel = ref(25);
 
 const menuList = [
   {

@@ -20,4 +20,7 @@ export default {
   },
   about: "About",
   tags: "Tags",
+  tag: {
+    create: "Add one or more tags",
+  },
 };

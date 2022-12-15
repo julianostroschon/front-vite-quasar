@@ -1,19 +1,30 @@
 <template>
-  <q-layout
-    view="hHh Lpr lff"
-    style="height: 300px"
-    class="shadow-2 rounded-borders"
-  >
-    <HeaderBar @open-menu="menu = !menu" />
-    <SideBar :drawer="menu" :list-items="menuList" />
-    <q-page-container>
-      <slot name="content" />
-    </q-page-container>
-  </q-layout>
+  <HeaderBar />
+  <div class="height-layout">
+    <q-splitter v-model="splitterModel" style="height: 100%" unit="%">
+      <template v-slot:before>
+        <div class="bg-grey-5 fit">
+          <NotebooksAndTagsMenu :list-items="menuList" />
+        </div>
+      </template>
+
+      <template v-slot:after>
+        <q-splitter v-model="insideModel" style="height: 100%" unit="%">
+          <template v-slot:before> </template>
+
+          <template v-slot:after>
+            <slot />
+          </template>
+        </q-splitter>
+      </template>
+    </q-splitter>
+  </div>
 </template>
 
 <script setup lang="ts">
-const menu = ref(true);
+const splitterModel = ref(15);
+
+const insideModel = ref(25);
 
 const menuList = [
   {
@@ -43,3 +54,8 @@ const menuList = [
   },
 ];
 </script>
+<style scoped>
+.height-layout {
+  height: 100vh;
+}
+</style>

@@ -12,9 +12,7 @@ useHead({
 </script>
 
 <template>
-  <MainLayout>
-    <RouterView />
-  </MainLayout>
+  <RouterView />
 </template>
 
 <style scoped>

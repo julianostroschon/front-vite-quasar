@@ -27,5 +27,6 @@ package-lock.json
 *.sw?
 
 #auto imports files 
+src/injection/*
 src/auto-imports.d.ts
 src/components.d.ts

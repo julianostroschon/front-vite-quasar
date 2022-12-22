@@ -1,6 +1,6 @@
 <template>
   <q-list>
-    <ItemList v-for="item in listItems" :key="item" :item="item" />
+    <!-- <ItemList v-for="item in listItems" :key="item" :item="item" /> -->
   </q-list>
 </template>
 

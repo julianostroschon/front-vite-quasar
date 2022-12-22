@@ -36,7 +36,7 @@ export default defineConfig({
         "@vueuse/head",
         "@vueuse/core",
       ],
-      dts: "src/injection/auto-imports.d.ts",
+      dts: "src/auto-imports.d.ts",
       dirs: ["src/composables", "src/store", "src/helpers", "src/stores"],
       vueTemplate: true,
     }),
@@ -46,7 +46,7 @@ export default defineConfig({
       extensions: ["vue", "md"],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: "src/injection/components.d.ts",
+      dts: "src/components.d.ts",
     }),
 
     VueI18n({

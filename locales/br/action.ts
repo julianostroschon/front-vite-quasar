@@ -29,4 +29,9 @@ export default {
     ing: "Criando",
     ed: "Criado",
   },
+  buy: {
+    index: "Comprar",
+    ing: "Comprando",
+    ed: "Comprado",
+  },
 };

@@ -17,9 +17,9 @@ useHead({
   <DeleteButton />
   <LoaderButton />
   <FabButton />
-  <DropDown />
   <OptionLocales />
   <SendButton />
+  <DropDown />
 </template>
 
 <style scoped>

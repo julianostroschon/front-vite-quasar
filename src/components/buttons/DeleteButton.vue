@@ -10,13 +10,13 @@ const handleClick = () => {
 };
 const btnClass = computed(() => (isDeleting.value ? "deleting" : ""));
 const label = computed(() =>
-  isDeleting.value ? "Deleting ..." : "Delete User"
+  isDeleting.value ? "action.delete.ing" : "action.delete.index"
 );
 </script>
 <template>
   <button @click="handleClick" :class="btnClass" :disabled="isDeleting">
     <span class="button-text">
-      {{ label }}
+      {{ $t(label) }}
     </span>
     <span class="animation">
       <span class="paper-wrapper">

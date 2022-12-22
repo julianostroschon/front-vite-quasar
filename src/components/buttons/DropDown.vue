@@ -2,7 +2,7 @@
   <div class="dropdown">
     <div :class="dropClass" class="menu">
       <button v-for="btn in menu" class="menu-button">
-        <span class="menu-button-text">{{ btn.name }}</span>
+        <span class="menu-button-text">{{ $t(btn.name) }}</span>
         <i class="material-icons">{{ btn.icon }}</i>
       </button>
     </div>
@@ -31,17 +31,17 @@ const closeDropdown = () => {
 
 const menu = [
   {
-    name: "Profile",
+    name: "text.profile",
     icon: "account_circle",
   },
   {
-    name: "Settings",
+    name: "text.settings",
     icon: "settings",
   },
-  {
-    name: "Logout",
-    icon: "logout",
-  },
+  // {
+  //   name: "Logout",
+  //   icon: "logout",
+  // },
 ];
 </script>
 <style scoped>

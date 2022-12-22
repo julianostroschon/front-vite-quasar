@@ -1,4 +1,7 @@
+import action from "./action";
+import text from "./text";
 export default {
+  action,
   caderno: {
     title: "Notebooks",
     quantidade: "Without notebooks | one notebook | {count} notebooks",
@@ -23,4 +26,5 @@ export default {
   tag: {
     create: "Add one or more tags",
   },
+  text,
 };

@@ -3,6 +3,7 @@ import markdown from "./markdown";
 import tag from "./tag";
 import login from "./login";
 import action from "./action";
+import text from "./text";
 
 export default {
   about: "Sobre",
@@ -13,4 +14,5 @@ export default {
   markdown,
   tag,
   login,
+  text,
 };

@@ -19,7 +19,7 @@ const label = computed(() =>
     ? "action.submit.ing"
     : isSent.value
     ? "action.submit.ed"
-    : "action.update.ed"
+    : "action.submit.index"
 );
 </script>
 <template>

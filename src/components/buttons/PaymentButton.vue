@@ -3,7 +3,7 @@
     <span class="rail"></span>
     <span class="icon"></span>
     <span class="text">
-      {{ label }}
+      {{ $t(label) }}
     </span>
   </button>
 </template>
@@ -23,7 +23,11 @@ const handleClick = () => {
   }, 2000);
 };
 const label = computed(() =>
-  isPaying.value ? "Processing" : isPaid.value ? "Complete" : "Buy product now"
+  isPaying.value
+    ? "action.buy.ing"
+    : isPaid.value
+    ? "action.buy.ed"
+    : "action.buy.index"
 );
 </script>
 <style scoped>

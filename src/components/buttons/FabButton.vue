@@ -11,16 +11,12 @@
         <i class="material-icons">sell</i>
       </button>
       <button>
-        <TranslationComponent
-          ref="translationRef"
-          @click="translationRef.toggleLocale()"
-        />
+        <TranslationComponent />
       </button>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-const translationRef = ref();
 const isOpen = ref(false);
 const openClass = computed(() => (isOpen.value ? "open" : ""));
 </script>

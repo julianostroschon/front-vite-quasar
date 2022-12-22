@@ -13,6 +13,13 @@ useHead({
 
 <template>
   <RouterView />
+  <PaymentButton />
+  <DeleteButton />
+  <LoaderButton />
+  <FabButton />
+  <DropDown />
+  <OptionLocales />
+  <SendButton />
 </template>
 
 <style scoped>

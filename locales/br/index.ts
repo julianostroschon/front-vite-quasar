@@ -4,6 +4,7 @@ import tag from "./tag";
 import login from "./login";
 
 export default {
+  home: "Casa",
   about: "Sobre",
   tags: "Entiquetas",
   caderno,

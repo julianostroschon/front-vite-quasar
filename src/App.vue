@@ -12,14 +12,16 @@ useHead({
 </script>
 
 <template>
-  <RouterView />
+  <!-- <RouterView />
   <PaymentButton />
   <DeleteButton />
   <LoaderButton />
   <FabButton />
   <OptionLocales />
   <SendButton />
-  <DropDown />
+  <DropDown /> -->
+  <ThemeButton />
+  <Switches />
 </template>
 
 <style scoped>

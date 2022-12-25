@@ -1,10 +1,10 @@
 <template>
   <q-toggle
-    @click="toggleDark()"
-    :icon="themeIcon"
     v-model="value"
-    :color="textColor"
     size="xl"
+    :icon="themeIcon"
+    :color="textColor"
+    @click="toggleDark()"
   />
 </template>
 <script setup lang="ts">

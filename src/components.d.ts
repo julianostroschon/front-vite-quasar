@@ -7,6 +7,7 @@ export {};
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
+    AntDesignTextBox: typeof import("./components/controls/AntDesignTextBox.vue")["default"];
     CardFooter: typeof import("./components/DynamicDialog/CardFooter.vue")["default"];
     CardHeader: typeof import("./components/DynamicDialog/CardHeader.vue")["default"];
     CreateNotebook: typeof import("./components/CreateNotebook/index.vue")["default"];
@@ -30,6 +31,9 @@ declare module "@vue/runtime-core" {
     RouterView: typeof import("vue-router")["RouterView"];
     SendButton: typeof import("./components/buttons/SendButton.vue")["default"];
     SubItem: typeof import("./components/NotebooksAndTagsMenu/SubItem.vue")["default"];
+    Switches: typeof import("./components/switches/index.vue")["default"];
+    SwitchRouded: typeof import("./components/switches/SwitchRouded.vue")["default"];
+    ThemeButton: typeof import("./components/buttons/ThemeButton.vue")["default"];
     ToggleTheme: typeof import("./components/ToggleTheme.vue")["default"];
     TranslationComponent: typeof import("./components/TranslationComponent.vue")["default"];
   }

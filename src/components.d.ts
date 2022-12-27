@@ -19,7 +19,9 @@ declare module "@vue/runtime-core" {
     HeaderBar: typeof import("./components/HeaderBar/index.vue")["default"];
     HeaderItem: typeof import("./components/NotebooksAndTagsMenu/HeaderItem.vue")["default"];
     ItemList: typeof import("./components/NotebooksAndTagsMenu/ItemList.vue")["default"];
+    LiquidLoader: typeof import("./components/Loaders/LiquidLoader.vue")["default"];
     LoaderButton: typeof import("./components/buttons/LoaderButton.vue")["default"];
+    LoginForm: typeof import("./components/form/LoginForm.vue")["default"];
     MainCard: typeof import("./components/DynamicDialog/MainCard.vue")["default"];
     MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];

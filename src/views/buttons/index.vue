@@ -1,6 +1,6 @@
 <template>
   <FabButton />
-  <SendButton />
   <DeleteButton />
+  <SendButton />
   <PaymentButton />
 </template>

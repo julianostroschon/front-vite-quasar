@@ -12,16 +12,19 @@ useHead({
 </script>
 
 <template>
-  <!-- <RouterView />
-  <PaymentButton />
+  <RouterView />
+  <!-- <PaymentButton />
   <DeleteButton />
   <LoaderButton />
   <FabButton />
   <OptionLocales />
   <SendButton />
   <DropDown /> -->
-  <ThemeButton />
-  <Switches />
+  <!-- <ThemeButton />
+  <Switches /> -->
+  <!-- <LoginForm />
+  < -->
+  <!-- <LiquidLoader /> -->
 </template>
 
 <style scoped>

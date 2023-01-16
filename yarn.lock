@@ -1584,6 +1584,14 @@
   resolved "https://registry.yarnpkg.com/@quasar/vite-plugin/-/vite-plugin-1.2.3.tgz#7da3653afbf45b11e9c344192fff2b9a7ccf3650"
   integrity sha512-ErSyY3cHz40GBIQUmqSI8OzzshJM5pLq33Yq3NEtYdWYh1NuIc4C766xkatUdxvhX9sLNnQQZax2ysJ5u7kUJA==
 
+"@rollup/plugin-graphql@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-graphql/-/plugin-graphql-2.0.2.tgz#d3547b5a202939d3815ae2ea48fae586debfbcf1"
+  integrity sha512-5kghuwAgcvdNrSARRLffKI6BDC3NskormIobhaO6nLdUhWFUJUB66zsgcXKqJu9kDXgiqLthjk7OaMxw552O9g==
+  dependencies:
+    "@rollup/pluginutils" "^5.0.1"
+    graphql-tag "^2.12.6"
+
 "@rollup/pluginutils@^4.2.0", "@rollup/pluginutils@^4.2.1":
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
@@ -1592,7 +1600,7 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^5.0.2":
+"@rollup/pluginutils@^5.0.1", "@rollup/pluginutils@^5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.0.2.tgz#012b8f53c71e4f6f9cb317e311df1404f56e7a33"
   integrity sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==
@@ -6726,6 +6734,13 @@ grapheme-splitter@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
+
+graphql-tag@^2.12.6:
+  version "2.12.6"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.12.6.tgz#d441a569c1d2537ef10ca3d1633b48725329b5f1"
+  integrity sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==
+  dependencies:
+    tslib "^2.1.0"
 
 graphql@^16.6.0:
   version "16.6.0"

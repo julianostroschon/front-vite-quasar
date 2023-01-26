@@ -1,12 +1,12 @@
-export * from './host';
-export * from './query';
+export * from "./host";
+export * from "./api";
 
 export function increment(value: number) {
-  return value += 1;
+  return (value += 1);
 }
 
 export function decrement(value: number) {
-  return value -= 1;
+  return (value -= 1);
 }
 
 export function loga(value: string | number | object) {

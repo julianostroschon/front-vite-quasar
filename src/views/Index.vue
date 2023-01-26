@@ -2,8 +2,9 @@
   <div class="title">
     <h1>{{ $t("about") }}</h1>
     <q-input v-model="name" type="text" filled class="bg-grey" />
-    <q-btn :to="`/${name}/`">Submit</q-btn>
+    <q-btn :to="`/${name}/`">{{ $t("action.submit.index") }}</q-btn>
   </div>
+  <FabButton />
 </template>
 <script setup lang="ts">
 const name = ref("");

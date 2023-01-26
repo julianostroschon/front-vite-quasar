@@ -92,7 +92,8 @@ declare global {
   const resolveDirective: typeof import("vue")["resolveDirective"];
   const resolveRef: typeof import("@vueuse/core")["resolveRef"];
   const resolveUnref: typeof import("@vueuse/core")["resolveUnref"];
-  const runQuery: typeof import("./helpers/query")["runQuery"];
+  const runMutation: typeof import("./helpers/api")["runMutation"];
+  const runQuery: typeof import("./helpers/api")["runQuery"];
   const shallowReactive: typeof import("vue")["shallowReactive"];
   const shallowReadonly: typeof import("vue")["shallowReadonly"];
   const shallowRef: typeof import("vue")["shallowRef"];
@@ -483,7 +484,10 @@ declare module "vue" {
     readonly resolveUnref: UnwrapRef<
       typeof import("@vueuse/core")["resolveUnref"]
     >;
-    readonly runQuery: UnwrapRef<typeof import("./helpers/query")["runQuery"]>;
+    readonly runMutation: UnwrapRef<
+      typeof import("./helpers/api")["runMutation"]
+    >;
+    readonly runQuery: UnwrapRef<typeof import("./helpers/api")["runQuery"]>;
     readonly shallowReactive: UnwrapRef<
       typeof import("vue")["shallowReactive"]
     >;

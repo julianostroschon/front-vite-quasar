@@ -7,34 +7,16 @@ export {};
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
-    AntDesignTextBox: typeof import("./components/controls/AntDesignTextBox.vue")["default"];
-    CardFooter: typeof import("./components/DynamicDialog/CardFooter.vue")["default"];
-    CardHeader: typeof import("./components/DynamicDialog/CardHeader.vue")["default"];
-    CreateNotebook: typeof import("./components/CreateNotebook/index.vue")["default"];
-    CreateTag: typeof import("./components/CreateTag/index.vue")["default"];
     DeleteButton: typeof import("./components/buttons/DeleteButton.vue")["default"];
     DropDown: typeof import("./components/buttons/DropDown.vue")["default"];
-    DynamicDialog: typeof import("./components/DynamicDialog/index.vue")["default"];
     FabButton: typeof import("./components/buttons/FabButton.vue")["default"];
-    HeaderBar: typeof import("./components/HeaderBar/index.vue")["default"];
-    HeaderItem: typeof import("./components/NotebooksAndTagsMenu/HeaderItem.vue")["default"];
-    ItemList: typeof import("./components/NotebooksAndTagsMenu/ItemList.vue")["default"];
-    LiquidLoader: typeof import("./components/Loaders/LiquidLoader.vue")["default"];
     LoaderButton: typeof import("./components/buttons/LoaderButton.vue")["default"];
-    LoginForm: typeof import("./components/form/LoginForm.vue")["default"];
-    MainCard: typeof import("./components/DynamicDialog/MainCard.vue")["default"];
-    MainLayout: typeof import("./components/MainLayout/index.vue")["default"];
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"];
-    NotebookForm: typeof import("./components/CreateNotebook/NotebookForm.vue")["default"];
-    NotebooksAndTagsMenu: typeof import("./components/NotebooksAndTagsMenu/index.vue")["default"];
     OptionLocales: typeof import("./components/OptionLocales.vue")["default"];
     PaymentButton: typeof import("./components/buttons/PaymentButton.vue")["default"];
     RouterLink: typeof import("vue-router")["RouterLink"];
     RouterView: typeof import("vue-router")["RouterView"];
     SendButton: typeof import("./components/buttons/SendButton.vue")["default"];
-    SubItem: typeof import("./components/NotebooksAndTagsMenu/SubItem.vue")["default"];
-    Switches: typeof import("./components/switches/index.vue")["default"];
-    SwitchRouded: typeof import("./components/switches/SwitchRouded.vue")["default"];
     ThemeButton: typeof import("./components/buttons/ThemeButton.vue")["default"];
     ToggleTheme: typeof import("./components/ToggleTheme.vue")["default"];
     TranslationComponent: typeof import("./components/TranslationComponent.vue")["default"];

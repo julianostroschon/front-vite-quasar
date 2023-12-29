@@ -2,7 +2,7 @@ import { MaybeRef } from "@vueuse/core";
 import { useQuery, useMutation } from "villus";
 
 export async function runQuery(
-  query: MaybeRef<Document>,
+  query: MaybeRef<Document> | string,
   variables: Record<string, Record<string, string>> | null = null
 ): Promise<Record<string, string | number>> {
   const { data } = (await useQuery({

@@ -1,13 +1,21 @@
 <template>
-  <div class="title">
-    <h1>{{ $t("about") }}</h1>
+  <div class="title row items-center justify-center q-pa-md">
+    <q-card class="bg-primary row-5">{{ $t("about") }}</q-card>
     <q-input v-model="name" type="text" filled class="bg-grey" />
-    <q-btn :to="`/${name}/`">{{ $t("action.submit.index") }}</q-btn>
+    {{ user }}
+    {{ newUser }}
   </div>
   <FabButton />
 </template>
 <script setup lang="ts">
-const name = ref("");
+const name = ref("julianostroschon");
+
+const user = useUserStore();
+
+const newUser = computed(() => {
+  console.log({ user, vl: user });
+  return user;
+});
 </script>
 
 <style scoped>

@@ -41,7 +41,7 @@ export type GitHubUserRaw = {
   id: number;
 };
 
-type GitHubUser = {
+export type GitHubUser = {
   twitterUsername: string | null;
   receivedEventsUrl: string;
   subscriptionsUrl: string;

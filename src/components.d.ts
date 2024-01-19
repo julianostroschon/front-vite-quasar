@@ -7,6 +7,7 @@ export {};
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
+    Avatar: typeof import("./components/Avatar.vue")["default"];
     DeleteButton: typeof import("./components/buttons/DeleteButton.vue")["default"];
     DropDown: typeof import("./components/buttons/DropDown.vue")["default"];
     FabButton: typeof import("./components/buttons/FabButton.vue")["default"];

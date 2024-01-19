@@ -1,4 +1,4 @@
-export * from "./host";
+export * from "./environment";
 export * from "./api";
 
 export function increment(value: number) {

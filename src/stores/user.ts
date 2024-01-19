@@ -1,59 +1,48 @@
-import { defineStore, acceptHMRUpdate } from "pinia";
-import { ref } from "vue";
-import { type GitHubUser, getGithubProfile } from "../services/external";
+import { defineStore } from "pinia";
 
-export const useUsers = defineStore("users", {
-  state: () => ({
-    userData: {},
-    // ...
-  }),
+import { type GitHubUser, getGithubProfile } from "../services/external";
+const id = "users";
+const useUsers = defineStore(id, {
+  state: () => {
+    const localData = localStorage.getItem(id);
+    if (localData !== "undefined" && localData) {
+      // console.log({ localData })
+      const data = JSON.parse(localData);
+      // console.log({ data })
+      return {
+        name: data.login,
+        profile: data,
+        // ...
+      };
+    }
+    return {
+      name: "",
+      profile: {},
+      // ...
+    };
+  },
+  getters: {
+    isValid: (state): boolean => !!state.name,
+  },
 
   actions: {
-    async getGithubProfile(username: string): Promise<void> {
+    isSameName(name: string): boolean {
+      return this.name === name;
+    },
+    async getGithubProfile(username: string): Promise<GitHubUser> {
+      const localData = localStorage.getItem(id);
+      if (localData !== "undefined" && localData) return JSON.parse(localData);
       try {
-        this.userData = await getGithubProfile(username);
-        console.log(`Welcome back ${this.userData.name}!`);
+        this.profile = (await getGithubProfile(username)) as GitHubUser;
+        localStorage.setItem(id, JSON.stringify(this.profile));
+        console.log(`Welcome back ${this.profile.name}!`);
+        return this.profile;
       } catch (error) {
         console.log(error);
-        // return error
+        throw new Error("Failed to get GitHub profile"); // TODO: handle error
       }
     },
   },
 });
 
-export const useUserStore = defineStore("user", async () => {
-  /**
-   * Current name of the user.
-   */
-  const username = ref("");
-  const age = ref();
-  const profile = async (
-    username: string = "julianostroschon"
-  ): Promise<GitHubUser> => await getGithubProfile(username);
-
-  /**
-   * `setUsername` is a function that takes a string and returns nothing
-   */
-  function setUsername(value: string) {
-    username.value = value;
-  }
-
-  /**
-   * `incrementAge` is a function that takes no arguments and returns nothing
-   */
-  // function incrementAge() {
-  //   age.value += 1;
-  // }
-
-  // async function getGithub(name: string): Promise<GitHubUser> {
-  //   return await getGithubProfile(name);
-  // }
-
-  return {
-    // incrementAge,
-    // getGithub,
-    username,
-    profile,
-    age,
-  };
-});
+export const profileStore = useUsers();

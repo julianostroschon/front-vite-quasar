@@ -38,7 +38,7 @@ declare global {
   const extendRef: typeof import("@vueuse/core")["extendRef"];
   const getCurrentInstance: typeof import("vue")["getCurrentInstance"];
   const getCurrentScope: typeof import("vue")["getCurrentScope"];
-  const getEnvironmentVariable: typeof import("./helpers/host")["getEnvironmentVariable"];
+  const getEnvironmentVariable: typeof import("./helpers/environment")["getEnvironmentVariable"];
   const h: typeof import("vue")["h"];
   const ignorableWatch: typeof import("@vueuse/core")["ignorableWatch"];
   const increment: typeof import("./helpers/index")["increment"];
@@ -74,6 +74,7 @@ declare global {
   const onUpdated: typeof import("vue")["onUpdated"];
   const pausableWatch: typeof import("@vueuse/core")["pausableWatch"];
   const preferredDark: typeof import("./composables/dark")["preferredDark"];
+  const profileStore: typeof import("./stores/user")["profileStore"];
   const provide: typeof import("vue")["provide"];
   const reactify: typeof import("@vueuse/core")["reactify"];
   const reactifyObject: typeof import("@vueuse/core")["reactifyObject"];
@@ -259,7 +260,6 @@ declare global {
   const useTransition: typeof import("@vueuse/core")["useTransition"];
   const useUrlSearchParams: typeof import("@vueuse/core")["useUrlSearchParams"];
   const useUserMedia: typeof import("@vueuse/core")["useUserMedia"];
-  const useUserStore: typeof import("./stores/user")["useUserStore"];
   const useVModel: typeof import("@vueuse/core")["useVModel"];
   const useVModels: typeof import("@vueuse/core")["useVModels"];
   const useVibrate: typeof import("@vueuse/core")["useVibrate"];
@@ -375,7 +375,7 @@ declare module "vue" {
       typeof import("vue")["getCurrentScope"]
     >;
     readonly getEnvironmentVariable: UnwrapRef<
-      typeof import("./helpers/host")["getEnvironmentVariable"]
+      typeof import("./helpers/environment")["getEnvironmentVariable"]
     >;
     readonly h: UnwrapRef<typeof import("vue")["h"]>;
     readonly ignorableWatch: UnwrapRef<
@@ -443,6 +443,9 @@ declare module "vue" {
     >;
     readonly preferredDark: UnwrapRef<
       typeof import("./composables/dark")["preferredDark"]
+    >;
+    readonly profileStore: UnwrapRef<
+      typeof import("./stores/user")["profileStore"]
     >;
     readonly provide: UnwrapRef<typeof import("vue")["provide"]>;
     readonly reactify: UnwrapRef<typeof import("@vueuse/core")["reactify"]>;
@@ -878,9 +881,6 @@ declare module "vue" {
     >;
     readonly useUserMedia: UnwrapRef<
       typeof import("@vueuse/core")["useUserMedia"]
-    >;
-    readonly useUserStore: UnwrapRef<
-      typeof import("./stores/user")["useUserStore"]
     >;
     readonly useVModel: UnwrapRef<typeof import("@vueuse/core")["useVModel"]>;
     readonly useVModels: UnwrapRef<typeof import("@vueuse/core")["useVModels"]>;

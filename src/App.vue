@@ -1,5 +1,6 @@
 <template>
-  <HelloWorld />
+  <BarUp />
+  <RouterView />
 </template>
 
 <style scoped>

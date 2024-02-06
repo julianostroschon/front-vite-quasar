@@ -7,16 +7,12 @@
     <q-item clickable to="/home" class="q-mx-md q-mt-sm">
       <q-toolbar-title class="q-pa-md">
         <q-avatar square class="ico bg-transparent">
-          <img src="../assets/ico_for_home/INTRANET_FUNDIMISA.png" />
+          <img src="/logo_fundimisa.png" />
         </q-avatar>
       </q-toolbar-title>
     </q-item>
     <q-space />
-    <q-tabs
-      v-model="tab"
-      class="bg-transparent text-white q-pa-md"
-      style="font-family: 'Fira Sans', sans-serif"
-    >
+    <q-tabs v-model="tab" class="font-tabs bg-transparent text-white q-pa-md">
       <q-tab
         no-caps
         v-for="item in tabItems"
@@ -32,19 +28,9 @@
   </q-tabs>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
+import { tabItems } from "./lib";
 const tab = ref("");
-const tabItems = [
-  { name: "inicio", label: "Inicio" },
-  { name: "rooms", label: "Agendar Sala" },
-  { name: "certifications", label: "Certificações" },
-  { name: "sig", label: "Documentação SIG" },
-  { name: "ramais", label: "Ramais" },
-  { name: "rh", label: "RH Divulga" },
-  { name: "cardup", label: "Cardápio" },
-];
 const tabBackgroundColor = ref("rgba(57, 73, 171, 1)");
-
 window.addEventListener("scroll", function () {
   const scrollVertical = window.scrollY || window.pageYOffset;
   if (scrollVertical == 0) {
@@ -62,6 +48,10 @@ window.addEventListener("scroll", function () {
   background-color: white;
   color: rgb(47, 47, 145);
   border-radius: 10px;
+}
+
+.font-tabs {
+  font-family: "Fira Sans", sans-serif;
 }
 
 .tab-header {

@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     DropDown: typeof import("./components/buttons/DropDown.vue")["default"]
     FabButton: typeof import("./components/buttons/FabButton.vue")["default"]
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Input: typeof import('./components/Input/Input.vue')['default']
     LoaderButton: typeof import("./components/buttons/LoaderButton.vue")["default"]
     Login: typeof import('./components/Login/Login.vue')['default']
     MakdownEditor: typeof import("./components/MakdownEditor.vue")["default"]

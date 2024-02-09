@@ -1,18 +1,22 @@
 <template>
   <div class="row justify-center">
-    <div v-for="(item, index) in items" :key="index" class="col-3 q-pa-md">
-      <q-item clickable v-ripple>
-        <q-item-section>
-          <div>
+    <div v-for="(item, index) in items" :key="index">
+      <q-item>
+        <q-item-section class="border-radius-inherit">
+          <q-avatar
+            color=" 
+              border row"
+            size="6em"
+          >
             <q-icon
-              class="custom-icon indigo-8-bg"
-              color="indigo-8"
-              size="5em"
               :name="item.icon"
+              color="indigo-8"
+              size="50px"
+              class="q-gutter-x-ls q-gutter-y-sm"
             />
-          </div>
+          </q-avatar>
         </q-item-section>
-        <div class="label text-start">
+        <div class="label text-start row">
           <q-item>
             <q-item-section>
               <q-item-label class="text-indigo-8 text-h6 text-weight-bolder">
@@ -35,18 +39,8 @@ import { items } from "./lib";
 </script>
 
 <style scoped>
-.custom-icon {
-  border-radius: 50%;
-  padding: 0.3em;
-}
-
-.indigo-8-bg {
-  border: 8px solid rgba(63, 81, 181);
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3);
-}
-.label {
-  top: 25px;
-  right: 10px;
-  position: relative;
+.border {
+  border: 5px solid rgb(20, 20, 105); /* Set border color to purple and width to 2 pixels */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box-shadow with desired values */
 }
 </style>

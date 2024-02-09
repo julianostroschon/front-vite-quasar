@@ -5,7 +5,7 @@
       white
       standout="bg-grey-4 text"
       v-model="inputValues[index]"
-      :label="item"
+      :label="(item as string)"
     >
       <template v-slot:append>
         <q-icon
@@ -32,11 +32,3 @@ const props = defineProps({
 
 const inputValues = ref(Array(props.objectInput.length).fill(""));
 </script>
-
-<style scoped>
-.label {
-  padding: 10px;
-  font-size: 15px;
-  position: relative;
-}
-</style>

@@ -18,6 +18,7 @@
         :name="item.name"
         :label="item.label"
         class="text-bold"
+        :class="{ 'text-indigo-8 bg-white rounded-borders': tab === item.name }"
       />
     </q-tabs>
 

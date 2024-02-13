@@ -5,7 +5,7 @@
       @click="setLink(item)"
       :class="{ 'text-white bg-green rounded-borders': link === item.name }"
     >
-      <q-item-section>{{ item.label }}</q-item-section>
+      <q-item-section>{{ $t(`cardDocSig.${item.label}`) }}</q-item-section>
     </q-item>
   </q-list>
 </template>

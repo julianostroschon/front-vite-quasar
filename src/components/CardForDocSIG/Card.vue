@@ -8,7 +8,7 @@
       </q-card-section>
       <q-card-section horizontal>
         <q-card-section class="row no-padding">
-          <div class="q-pa-md" style="max-width: 350px">
+          <div class="q-pa-md">
             <List />
           </div>
         </q-card-section>

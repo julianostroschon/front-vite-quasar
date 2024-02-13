@@ -5,7 +5,7 @@
       v-for="item in tabItems"
       :key="item.name"
       :name="item.name"
-      :label="item.label"
+      :label="$t(`cardDocSig.${item.name}`)"
       class="text-bold"
       :class="{ 'text-indigo-8 bg-white rounded-borders': tab === item.name }"
     />

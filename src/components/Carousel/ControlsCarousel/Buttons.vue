@@ -1,15 +1,10 @@
 <template>
-  <div
-    class="btn-containerbg-grey-6 gt-sm inline mx-1"
-    v-for="(item, index) in items"
-    :key="index"
-    width="auto"
-  >
+  <div class="mx-1" v-for="(item, index) in items" :key="index">
     <q-btn
       round
       padding="none"
       color="white"
-      :icon="''"
+      :icon="items[index]"
       :size="isActive === index ? '7px' : '5px'"
       @click="setActive(index)"
     >

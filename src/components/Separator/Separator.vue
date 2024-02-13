@@ -1,10 +1,11 @@
 <template>
-  <div class="custom-separator">
-    <div class="line"></div>
-    <div class="text" :style="{ width: large }">
-      <h5 class="custom-text">{{ texto }}</h5>
+  <div class="line relative-position flex justify-center">
+    <div
+      class="text bg-green z-top relative-position"
+      :style="{ width: large }"
+    >
+      <h5 class="text-white text-bold gt-sm inline">{{ texto }}</h5>
     </div>
-    <div class="line"></div>
   </div>
 </template>
 
@@ -22,27 +23,11 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.custom-separator {
-  display: flex;
-  border: 0;
-}
 .line {
-  flex-grow: 1;
   border-bottom: 10px solid var(--separator-color, #367c1e);
-  height: 15px;
 }
 .text {
-  background-color: rgba(0, 159, 0, 255);
-  border-radius: 3px;
-  color: white;
-  bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-.custom-text {
-  margin: 0;
-  padding: 5px 0;
-  font-weight: bold;
-  font-size: xx-large;
+  top: 20px;
+  border-radius: 5px;
 }
 </style>

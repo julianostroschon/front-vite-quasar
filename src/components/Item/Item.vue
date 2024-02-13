@@ -3,11 +3,7 @@
     <div v-for="(item, index) in items" :key="index">
       <q-item>
         <q-item-section class="border-radius-inherit">
-          <q-avatar
-            color=" 
-              border row"
-            size="6em"
-          >
+          <q-avatar class="border row" size="6em">
             <q-icon
               :name="item.icon"
               color="indigo-8"

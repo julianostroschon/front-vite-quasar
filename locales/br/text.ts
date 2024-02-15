@@ -5,4 +5,5 @@ export default {
   seeMore: "Veja mais",
   previous: "Anterior",
   next: "Próximo",
+  integration: "Integração",
 };

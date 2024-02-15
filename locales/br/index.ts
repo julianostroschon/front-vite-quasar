@@ -4,6 +4,7 @@ import tag from "./tag";
 import login from "./login";
 import action from "./action";
 import text from "./text";
+import cardDocSig from "./cardDocSig";
 
 export default {
   about: "Sobre",
@@ -15,4 +16,5 @@ export default {
   tag,
   login,
   text,
+  cardDocSig,
 };

@@ -12,25 +12,25 @@
           offset="2"
           :imgs-ex="imgs[index - 1].img"
           :title="imgs[index - 1].title"
-          :widht="'500px'"
-          :height="'1000px'"
+          width="500px"
+          height="1000px"
         />
         <Button
           v-if="index > 0"
-          :direction="'prev'"
-          :icoBtn="'arrow_back'"
+          direction="prev"
+          icon="arrow_back"
           @navigation="(nav) => navSlides(nav)"
         />
         <Card
           :imgs-ex="item.img"
           :title="item.title"
-          :widht="'1200px'"
-          :height="'1000px'"
+          width="1200px"
+          height="1000px"
         />
         <Button
           v-if="index < imgs.length - 1"
-          :direction="'next'"
-          :icoBtn="'arrow_back'"
+          direction="next"
+          icon="arrow_back"
           class="flip-horizontal"
           @navigation="(nav) => navSlides(nav)"
         />
@@ -40,8 +40,8 @@
           offset="1"
           :imgs-ex="imgs[index + 1].img"
           :title="imgs[index + 1].title"
-          :widht="'500px'"
-          :height="'1000px'"
+          width="500px"
+          height="1000px"
         />
       </q-carousel-slide>
     </q-carousel>

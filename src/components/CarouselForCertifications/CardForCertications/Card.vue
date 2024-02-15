@@ -10,7 +10,7 @@
       <q-img
         :src="props.imgsEx"
         :height="props.height"
-        :width="props.widht"
+        :width="props.width"
         class="full-height"
       />
     </q-card-section>
@@ -26,7 +26,7 @@ const props = defineProps({
     type: String,
     default: "",
   },
-  widht: {
+  width: {
     type: String,
     default: "",
   },

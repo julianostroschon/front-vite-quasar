@@ -2,7 +2,7 @@
   <div class="col-1 self-center">
     <q-btn
       flat
-      :icon="props.icoBtn"
+      :icon="props.icon"
       class="bg-indigo-8"
       color="white"
       rounded
@@ -19,7 +19,7 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  icoBtn: {
+  icon: {
     type: String,
     default: "",
   },

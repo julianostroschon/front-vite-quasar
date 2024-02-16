@@ -1,5 +1,5 @@
 <template>
-  <Image_Rh class="padding" />
+  <ImageRh class="padding" />
   <Separator texto="DESTAQUES" large="300px" class="pt-8" />
   <CarouselAtendimentoRh />
   <Carousel />

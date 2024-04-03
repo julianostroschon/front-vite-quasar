@@ -1,5 +1,5 @@
 <template>
   <p>
-    {{$t('markdown.title')}}
+    {{ $t("markdown.title") }}
   </p>
 </template>

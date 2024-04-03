@@ -1,3 +1,3 @@
 export default {
-  title: 'Editor Markdown'
+  title: "Editor Markdown",
 };

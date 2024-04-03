@@ -43,6 +43,7 @@ const useUsers = defineStore(id, {
       }
     },
   },
+  persist: true,
 });
 
 export const profileStore = useUsers();

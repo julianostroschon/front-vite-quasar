@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "prepare": "husky install",
+    "format": "prettier -w .",
     "postinstall": "yarn husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -19,6 +19,7 @@
     "@vueuse/core": "^9.6.0",
     "graphql": "^16.6.0",
     "pinia": "^2.0.27",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "quasar": "^2.10.2",
     "villus": "^2.0.1",
     "vue": "^3.2.41",

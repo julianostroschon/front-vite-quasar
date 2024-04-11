@@ -1,15 +1,20 @@
 import { MaybeRef } from "@vueuse/core";
+import { DocumentNode, TypedQueryDocumentNode } from "graphql";
 import { useQuery, useMutation } from "villus";
 
-export async function runQuery(
-  query: MaybeRef<Document> | string,
+export async function runQuery<Output>(
+  query: MaybeRef<
+    | string
+    | DocumentNode
+    | TypedQueryDocumentNode<any, Record<string, Record<string, string>> | null>
+  >,
   variables: Record<string, Record<string, string>> | null = null
-): Promise<Record<string, string | number>> {
+): Promise<Output> {
   const { data } = (await useQuery({
     query,
     variables,
   }).execute()) as {
-    data: Record<string, string | number>;
+    data: Output;
   };
 
   return data;

@@ -30,8 +30,13 @@ const useUsers = defineStore(id, {
       return this.name === name;
     },
     async getGithubProfile(username: string): Promise<GitHubUser> {
+      console.log({ username });
       const localData = localStorage.getItem(id);
-      if (localData !== "undefined" && localData) return JSON.parse(localData);
+      console.log({ localData });
+      if (localData !== "undefined" && localData) {
+        console.log(JSON.parse(localData));
+        return JSON.parse(localData);
+      }
       try {
         this.profile = (await getGithubProfile(username)) as GitHubUser;
         localStorage.setItem(id, JSON.stringify(this.profile));

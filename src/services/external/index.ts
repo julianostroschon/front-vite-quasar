@@ -2,6 +2,7 @@ import { snakeToCamel } from "../../support/utils";
 
 export async function getGithubProfile(username: string): Promise<GitHubUser> {
   const response = await fetch(`https://api.github.com/users/${username}`);
+  console.log({ response });
   const data: GitHubUserRaw = await response.json();
   return snakeToCamel(data) as GitHubUser;
 }

@@ -31,6 +31,7 @@ onBeforeMount(() => {
 });
 
 async function submit() {
+  console.log({ user: name.value });
   await user.value.getGithubProfile(name.value);
   title.value = user.value.name;
 }

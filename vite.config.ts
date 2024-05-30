@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import AutoImport from "unplugin-auto-import/vite";
-import path from "node:path";
+import { resolve } from "node:path";
 import Pages from "vite-plugin-pages";
 import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 import Unocss from "unocss/vite";
@@ -12,7 +12,7 @@ import Unocss from "unocss/vite";
 export default defineConfig({
   resolve: {
     alias: {
-      "~": `${path.resolve(__dirname, "src")}/`,
+      "~": `${resolve(__dirname, "src")}/`,
     },
   },
   plugins: [
@@ -41,7 +41,13 @@ export default defineConfig({
         "@vueuse/core",
       ],
       dts: "src/auto-imports.d.ts",
-      dirs: ["src/composables", "src/store", "src/helpers", "src/stores"],
+      dirs: [
+        "src/composables",
+        "src/store",
+        "src/helpers",
+        "src/stores",
+        "src/support/",
+      ],
       vueTemplate: true,
     }),
 
@@ -56,7 +62,7 @@ export default defineConfig({
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
-      include: [path.resolve(__dirname, "./locales/**")],
+      include: [resolve(__dirname, "./locales/**")],
     }),
   ],
 });

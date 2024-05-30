@@ -10,8 +10,10 @@ declare global {
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
+  const authorName: typeof import('./support/constants')['authorName']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const backgroundColor: typeof import('./composables/theme')['backgroundColor']
+  const camelToSnake: typeof import('./support/utils')['camelToSnake']
   const color: typeof import('./composables/theme')['color']
   const computed: typeof import('vue')['computed']
   const computedAsync: typeof import('@vueuse/core')['computedAsync']
@@ -98,6 +100,7 @@ declare global {
   const shallowReactive: typeof import('vue')['shallowReactive']
   const shallowReadonly: typeof import('vue')['shallowReadonly']
   const shallowRef: typeof import('vue')['shallowRef']
+  const snakeToCamel: typeof import('./support/utils')['snakeToCamel']
   const syncRef: typeof import('@vueuse/core')['syncRef']
   const syncRefs: typeof import('@vueuse/core')['syncRefs']
   const templateRef: typeof import('@vueuse/core')['templateRef']
@@ -300,8 +303,10 @@ declare module 'vue' {
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
+    readonly authorName: UnwrapRef<typeof import('./support/constants')['authorName']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly backgroundColor: UnwrapRef<typeof import('./composables/theme')['backgroundColor']>
+    readonly camelToSnake: UnwrapRef<typeof import('./support/utils')['camelToSnake']>
     readonly color: UnwrapRef<typeof import('./composables/theme')['color']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly computedAsync: UnwrapRef<typeof import('@vueuse/core')['computedAsync']>
@@ -388,6 +393,7 @@ declare module 'vue' {
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
+    readonly snakeToCamel: UnwrapRef<typeof import('./support/utils')['snakeToCamel']>
     readonly syncRef: UnwrapRef<typeof import('@vueuse/core')['syncRef']>
     readonly syncRefs: UnwrapRef<typeof import('@vueuse/core')['syncRefs']>
     readonly templateRef: UnwrapRef<typeof import('@vueuse/core')['templateRef']>

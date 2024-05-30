@@ -9,7 +9,7 @@ export const camelToSnake = (key: string): string => {
   return snakeCaseKey;
 };
 
-export function snakeToCamel(obj: any): Record<string, any> {
+export function snakeToCamel(obj: any): Record<keyof typeof obj, any> {
   if (obj === null || typeof obj !== "object") {
     return obj;
   }
@@ -17,7 +17,7 @@ export function snakeToCamel(obj: any): Record<string, any> {
     return obj.map((item): Record<string, any> => snakeToCamel(item));
   }
   return Object.keys(obj).reduce(
-    (acc: Record<string, any>, key: string): Record<string, any> => {
+    (acc: Record<keyof typeof obj, any>, key: string): Record<string, any> => {
       const searchValue = /_([a-z])/g;
       const replacer = (_: string, letter: string): string =>
         letter.toUpperCase();

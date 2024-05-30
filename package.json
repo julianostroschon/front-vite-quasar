@@ -1,7 +1,8 @@
 {
-  "name": "parti-notes-front",
+  "name": "vite-front",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Juliano Stroschön",
   "type": "module",
   "scripts": {
     "dev": "vite",

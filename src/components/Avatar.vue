@@ -1,35 +1,33 @@
 <template>
-  <q-img class="avatar" :src="exposed" />
+  <q-avatar class="avatar-profile">
+    <img src="/profile.png" class="q-pa-sm avatar" />
+  </q-avatar>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Avatar",
-  props: {
-    avatar: {
-      type: String,
-      default: () => "https://cdn.quasar.dev/img/boy-avatar.png",
-    },
-  },
-  computed: {
-    exposed() {
-      return this.avatar;
-    },
-  },
   setup() {
-    return {};
+    return {
+      authorName,
+    };
   },
 });
 </script>
 
 <style scoped>
-.avatar {
-  border: 3px solid #000;
-  border-radius: 50%;
-  width: 100px;
+.avatar-profile {
+  border-radius: 30%;
+  height: 200px;
+  width: 200px;
 }
+.avatar {
+  border: 3px solid rgba(211, 211, 211, 0.239);
+  border-radius: 10px;
+}
+
 .avatar:hover {
-  filter: drop-shadow(0 0 2em #646cffff);
+  filter: drop-shadow(0 0 5px rgba(100, 108, 255, 0.581));
 }
 </style>

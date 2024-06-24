@@ -1,6 +1,6 @@
 <template>
   <q-avatar class="avatar-profile">
-    <img src="/profile.png" class="q-pa-sm avatar" />
+    <!-- <img src="/profile.png" class="q-pa-sm avatar" /> -->
   </q-avatar>
 </template>
 
@@ -18,7 +18,6 @@ export default defineComponent({
 
 <style scoped>
 .avatar-profile {
-  border-radius: 30%;
   height: 200px;
   width: 200px;
 }

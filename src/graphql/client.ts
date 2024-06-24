@@ -21,7 +21,8 @@ export const setAuthToken = (token?: string | null): void => {
   };
 
   if (token != null) {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // eslint-disable-next-line
+    // @ts-ignore
     options.headers.Authorization = token;
   }
 

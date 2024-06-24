@@ -8,9 +8,11 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Avatar: typeof import('./components/Avatar.vue')['default']
+    BioComponent: typeof import('./components/bio/BioComponent.vue')['default']
     DeleteButton: typeof import('./components/buttons/DeleteButton.vue')['default']
     DropDown: typeof import('./components/buttons/DropDown.vue')['default']
     FabButton: typeof import('./components/buttons/FabButton.vue')['default']
+    Loader: typeof import('./components/Loader.vue')['default']
     LoaderButton: typeof import('./components/buttons/LoaderButton.vue')['default']
     MakdownEditor: typeof import('./components/MakdownEditor.vue')['default']
     OptionLocales: typeof import('./components/OptionLocales.vue')['default']

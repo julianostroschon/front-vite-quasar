@@ -1,18 +1,23 @@
-import { MaybeRef } from "@vueuse/core";
-import { DocumentNode, TypedQueryDocumentNode } from "graphql";
-import { useQuery, useMutation } from "villus";
+import { TypedDocumentNode } from "@apollo/client";
+import { DocumentNode } from "graphql";
+import { useQuery, useMutation, QueryVariables, MaybeLazyOrRef } from "villus";
 
 export async function runQuery<Output>(
-  query: MaybeRef<
-    | string
-    | DocumentNode
-    | TypedQueryDocumentNode<any, Record<string, Record<string, string>> | null>
-  >,
-  variables: Record<string, Record<string, string>> | null = null
+  query: string | DocumentNode | TypedDocumentNode<any, QueryVariables>,
+  variables?: MaybeLazyOrRef<QueryVariables> | undefined
 ): Promise<Output> {
+  if (variables) {
+    const { data } = (await useQuery({
+      query,
+      variables,
+    }).execute()) as {
+      data: Output;
+    };
+
+    return data;
+  }
   const { data } = (await useQuery({
     query,
-    variables,
   }).execute()) as {
     data: Output;
   };
@@ -21,10 +26,17 @@ export async function runQuery<Output>(
 }
 
 export async function runMutation(
-  query: MaybeRef<Document>,
-  variables: object
+  query: string | DocumentNode | TypedDocumentNode<any, QueryVariables>,
+  variables?: MaybeLazyOrRef<QueryVariables> | undefined
 ): Promise<Record<string, Record<string, string>>> {
-  const { data } = (await useMutation(query).execute(variables)) as {
+  if (variables) {
+    const { data } = (await useMutation(query).execute(variables)) as {
+      data: Record<string, Record<string, string>>;
+    };
+    return data;
+  }
+
+  const { data } = (await useMutation(query)) as unknown as {
     data: Record<string, Record<string, string>>;
   };
   return data;

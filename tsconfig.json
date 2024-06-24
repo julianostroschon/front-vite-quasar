@@ -16,6 +16,10 @@
 
   "types": ["vite-plugin-pages/client", "vite/client"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules", "vite-plugin-pages/client"],
+  "exclude": [
+    "node_modules",
+    "vite-plugin-pages/client",
+    "src/graphql/generated"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

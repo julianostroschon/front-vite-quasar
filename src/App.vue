@@ -2,6 +2,7 @@
 
 <template>
   <RouterView />
+  <!-- <Loader /> -->
 </template>
 
 <style scoped></style>
